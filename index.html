@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chijioke C Odoh | Cloud Engineer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            color: white;
+            background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #000000);
+            background-size: 400% 400%;
+            animation: bg 12s ease infinite;
+            display: flex;
+            justify-content: center;
+        }
+
+        @keyframes bg {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px 0;
+            background: rgba(18, 26, 43, 0.75);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 50px rgba(0,0,0,0.6);
+        }
+
+        /* HERO */
+        .hero {
+            text-align: center;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .profile-wrapper {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            margin: auto;
+        }
+
+        .glow {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: conic-gradient(#00d4ff, #4db5ff, #00ffcc, #00d4ff);
+            animation: rotate 3s linear infinite;
+            filter: blur(8px);
+        }
+
+        @keyframes rotate {
+            0% {transform: rotate(0deg);}
+            100% {transform: rotate(360deg);}
+        }
+
+        .profile {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            width: 134px;
+            height: 134px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #0f2027;
+        }
+
+        h1 {
+            margin-top: 20px;
+            color: #4db5ff;
+            font-size: 2.3rem;
+        }
+
+        .role {
+            margin-top: 10px;
+            color: #00d4ff;
+            font-weight: bold;
+        }
+
+        .badge {
+            margin-top: 15px;
+            display: inline-block;
+            padding: 6px 12px;
+            border: 1px solid #4db5ff;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        /* SECTIONS */
+        .section {
+            margin-top: 30px;
+        }
+
+        .section h2 {
+            color: #00d4ff;
+            margin-bottom: 10px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 10px;
+        }
+
+        ul {
+            padding-left: 20px;
+            line-height: 1.8;
+        }
+
+        li {
+            opacity: 0.9;
+        }
+
+        /* GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        /* BUTTONS */
+        .buttons {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        a {
+            text-decoration: none;
+            padding: 12px 18px;
+            border-radius: 10px;
+            margin: 10px;
+            display: inline-block;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .linkedin {
+            background: #0a66c2;
+            color: white;
+        }
+
+        .github {
+            background: #24292e;
+            color: white;
+        }
+
+        a:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        /* FOOTER */
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.85rem;
+            opacity: 0.7;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HERO -->
+    <div class="hero">
+
+        <div class="profile-wrapper">
+            <div class="glow"></div>
+            <img class="profile"
+                 src="https://via.placeholder.com/150"
+                 alt="Profile">
+        </div>
+
+        <h1>Chijioke C Odoh</h1>
+
+        <div class="role">
+            Junior Cloud Engineer | AWS | Azure | Linux | DevOps
+        </div>
+
+        <div class="badge">
+            Live Infrastructure Project • IaaS Deployment
+        </div>
+
+    </div>
+
+    <!-- ABOUT -->
+    <div class="section">
+        <h2>Professional Summary</h2>
+        <div class="card">
+            I am a Cloud Engineering learner building real-world infrastructure using AWS and Azure.
+            I deploy Linux servers, configure web services, and manage cloud resources using SSH and CLI tools.
+        </div>
+    </div>
+
+    <!-- SKILLS + TOOLS -->
+    <div class="section grid">
+
+        <div class="card">
+            <h2>Cloud Skills</h2>
+            <ul>
+                <li>Amazon EC2 Virtual Machines</li>
+                <li>Azure Virtual Machines</li>
+                <li>Linux Server Administration</li>
+                <li>SSH Remote Access</li>
+                <li>Networking & Public IP</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Tools & Technologies</h2>
+            <ul>
+                <li>Ubuntu Server</li>
+                <li>Nginx Web Server</li>
+                <li>Bash Scripting</li>
+                <li>Git & GitHub</li>
+                <li>Cloud CLI Basics</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- PROJECT -->
+    <div class="section">
+        <h2>Cloud Project (Live Deployment)</h2>
+        <div class="card">
+            This website is hosted on a live Linux Virtual Machine deployed in the cloud.
+            It demonstrates Infrastructure as a Service (IaaS), including VM provisioning,
+            server configuration, SSH access, and web hosting using Nginx.
+        </div>
+    </div>
+
+    <!-- ARCHITECTURE -->
+    <div class="section">
+        <h2>Architecture Overview</h2>
+        <div class="card">
+            User → Internet → Cloud VM (Azure / AWS) → Linux Server → Nginx → Website
+        </div>
+    </div>
+
+    <!-- LINKS -->
+    <div class="buttons">
+
+        <a class="linkedin"
+           href="https://www.linkedin.com/in/chijioke-odoh-a263001bb/"
+           target="_blank">
+            LinkedIn
+        </a>
+
+        <a class="github"
+           href="https://github.com/Jiokechris"
+           target="_blank">
+            GitHub
+        </a>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        Built on Cloud Infrastructure • Linux • Nginx • AWS • Azure • DevOps Learning Path
+    </div>
+
+</div>
+
+</body>
+</html>
