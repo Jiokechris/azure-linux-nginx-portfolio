@@ -15,7 +15,6 @@ The project was built as part of my Cloud Engineering learning journey to gain p
 
 The website was deployed manually on a live Ubuntu Server virtual machine running in Azure cloud infrastructure.
 
----
 
 # Technologies Used
 
@@ -28,13 +27,13 @@ The website was deployed manually on a live Ubuntu Server virtual machine runnin
 - CSS
 - GitHub
 
----
+
 
 # Cloud Architecture
 
 User → Internet → Azure Virtual Machine → Ubuntu Linux → Nginx → Portfolio Website
 
----
+
 
 # Project Objectives
 
@@ -47,7 +46,7 @@ The main goal of this project was to:
 - Understand Azure networking concepts
 - Practice cloud infrastructure deployment manually
 
----
+
 
 # Deployment Steps
 
@@ -63,7 +62,6 @@ Configured:
 - Port 22 (SSH)
 - Port 80 (HTTP)
 
----
 
 ## 2. SSH Connection
 
@@ -71,50 +69,47 @@ Connected remotely into the Linux VM using SSH from PowerShell.
 
 Example:
 
-```bash
+   bash
 ssh -i chijiokeazure_key.pem azureuser@PUBLIC_IP
-```
 
----
+
 
 ## 3. Linux Server Update
 
 Updated the server packages:
 
-```bash
+   bash
 sudo apt update && sudo apt upgrade -y
-```
 
----
+
+
 
 ## 4. Nginx Installation
 
 Installed Nginx web server:
 
-```bash
+   bash
 sudo apt install nginx -y
-```
+
 
 Started and enabled the service:
 
-```bash
+   bash
 sudo systemctl start nginx
 sudo systemctl enable nginx
-```
 
----
+
 
 ## 5. Website Deployment
 
 Moved the portfolio HTML project into:
 
-```bash
+   bash
 /var/www/html
-```
+
 
 Replaced the default Nginx landing page with custom portfolio code.
 
----
 
 # Challenges Encountered
 
@@ -122,9 +117,9 @@ Replaced the default Nginx landing page with custom portfolio code.
 
 Issue:
 
-```text
+   text
 Permission denied (publickey)
-```
+
 
 Cause:
 - Incorrect SSH username used initially
@@ -133,11 +128,10 @@ Fix:
 - Verified correct Azure VM username
 - Reconnected using:
 
-```bash
-ssh -i chijiokeazure_key.pem azureuser@PUBLIC_IP
-```
+   bash
+ssh -i chijiokeazure_key.pem chijiokeazure@PUBLIC_IP
 
----
+
 
 ## 2. Network Security Group Understanding
 
@@ -149,26 +143,24 @@ Learned:
 - Port 80 allows web traffic
 - Azure NSG controls inbound traffic
 
----
+
 
 ## 3. Character Encoding Issue
 
 Issue:
 HTML bullet symbols displayed as:
 
-```text
+   text
 â€¢
-```
+
 
 Fix:
 - Replaced symbols with semantic HTML lists using:
-```html
+   html
 <ul>
 <li></li>
 </ul>
-```
 
----
 
 # Skills Demonstrated
 
@@ -180,36 +172,23 @@ Fix:
 - Infrastructure troubleshooting
 - Static website hosting
 
----
 
 # Screenshots
 
 ## Azure VM Running
 
-Add screenshot here:
-```text
-screenshots/azure-vm.png
-```
+   ![Azure VM](screenshots/azure-vm.png)
 
----
 
 ## SSH Terminal Session
 
-Add screenshot here:
-```text
-screenshots/ssh-terminal.png
-```
-
----
+  ![SSH Terminal](screenshots/ssh-terminal.png)
 
 ## Live Website
 
-Add screenshot here:
-```text
-screenshots/portfolio-site.png
-```
+  ![Portfolio Website](screenshots/portfolio-site.png)
 
----
+
 
 # Future Improvements
 
@@ -220,7 +199,6 @@ screenshots/portfolio-site.png
 - Deploy using Kubernetes
 - Add CI/CD pipeline
 
----
 
 # Author
 
