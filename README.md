@@ -67,8 +67,6 @@ Configured:
 
 Connected remotely into the Linux VM using SSH from PowerShell.
 
-Example:
-
    bash
 ssh -i chijiokeazure_key.pem azureuser@PUBLIC_IP
 
@@ -105,7 +103,7 @@ sudo systemctl enable nginx
 Moved the portfolio HTML project into:
 
    bash
-/var/www/html
+sudo nano /var/www/html
 
 
 Replaced the default Nginx landing page with custom portfolio code.
